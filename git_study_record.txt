@@ -1,0 +1,13 @@
+1.让git管理文件：
+在需要git管理的文件夹上右键点击git bash here，打开git命令行后，执行git init命令即可
+2.将未跟踪的文件添加到暂存区，需要使用：
+git add filename 或者 git commit -am "message"
+3.git 用户的注册：
+ git config --global user.name hetao 
+ git config --global user.email 289022725@qq.com
+4.只有注册后才可以进行git commit 操作，否则git不知道是哪位用户在进行提交
+5.查看git状态：
+git status :当前文件状态
+git log :当前提交信息
+git config --list :列出git的配置信息
+git branch : 列出所有的branch，并用* 表示出当前分支

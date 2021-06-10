@@ -50,3 +50,22 @@ git stash list:查看stash中保存有哪些内容
 git stash apply stash@{0}：将stash中的{0}所包含的文件应用到当前工作区中
 git stash pop stash@{0}:将stash中的{0}所包含的文件应用到当前工作区中，并删除stash中的{0}
 git stash drop stash@{0}: 将stash中的{0}删除掉
+
+15.在github上创建远程仓库方式见图片教程，此处说明一下，
+对已经创建好的远程仓库，在第一次将本地仓库推送到远程仓库时
+使用命令：
+1）git push https://github.com/hetao-bj/git_study.git master
+2）该命令执行后有可能会出现没有弹出输入用户名和密码的弹框，此时可以按Ctrl+C，退出push状态
+3）然后执行git credential-manager uninstall命令，执行后既可正常弹出用户名和密码窗口
+4）再执行git push https://github.com/hetao-bj/git_study.git master
+5）提示：fatal: unable to access 'https://github.com/hetao-bj/git_study.git/': Failed to connect to github.com port 443: Timed out
+6）执行git config --global http.sslVerify "false"，解决第五步的问题
+7）再执行git push https://github.com/hetao-bj/git_study.git master，将本地仓库的内容推送到远程仓库的master分支
+
+16.ssh-keygen：生成本地的公钥和私钥
+ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authorized_keys文件中
+复制后再对服务器的仓库进行push或者pull的操作时不需要再输入密码
+
+
+
+

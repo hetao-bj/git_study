@@ -28,8 +28,25 @@ filename已经在暂存区了，则该操作不会起作用
 
 9.对某个文件取消跟踪
 git rm --cached readme1.txt    删除readme1.txt的跟踪，并保留在本地。
-git rm --f readme1.txt    删除readme1.txt的跟踪，并且删除本地文件。
+git rm --f readme1.txt    删除readme1.txt的跟踪，并且删除本地文件和暂存区文件。
 
-10. 分支创建
+10.git中文件的重命名
+git mv old_filename new_filename :将工作区和暂存区的文件都进行重命名
+
+11. 分支创建
 git branch branch_name 创建一个分支，但是并不切换
 git checkout -b branch_name 创建一个分支并切换过去
+
+12.git diff：比较工作区与暂存区文件的差异
+git diff --staged : 比较暂存区与版本库的文件差异
+git diff 版本号 版本号 ：比较当前分支内的两个版本之间文件的差异
+git diff 分支 分支：比较两个分支的最新提交版本之间的差异
+
+13.git merge branch_name :
+合并两个分支，合并之前需要切换到master分支，然后进行快速合并或者冲突合并
+
+14.git stash:将工作区的改动保存到stash中
+git stash list:查看stash中保存有哪些内容
+git stash apply stash@{0}：将stash中的{0}所包含的文件应用到当前工作区中
+git stash pop stash@{0}:将stash中的{0}所包含的文件应用到当前工作区中，并删除stash中的{0}
+git stash drop stash@{0}: 将stash中的{0}删除掉

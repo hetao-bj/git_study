@@ -29,3 +29,7 @@ filename已经在暂存区了，则该操作不会起作用
 9.对某个文件取消跟踪
 git rm --cached readme1.txt    删除readme1.txt的跟踪，并保留在本地。
 git rm --f readme1.txt    删除readme1.txt的跟踪，并且删除本地文件。
+
+10. 分支创建
+git branch branch_name 创建一个分支，但是并不切换
+git checkout -b branch_name 创建一个分支并切换过去

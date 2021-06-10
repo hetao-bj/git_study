@@ -1,13 +1,31 @@
 1.让git管理文件：
 在需要git管理的文件夹上右键点击git bash here，打开git命令行后，执行git init命令即可
+
 2.将未跟踪的文件添加到暂存区，需要使用：
 git add filename 或者 git commit -am "message"
+
 3.git 用户的注册：
  git config --global user.name hetao 
  git config --global user.email 289022725@qq.com
+
 4.只有注册后才可以进行git commit 操作，否则git不知道是哪位用户在进行提交
+
 5.查看git状态：
 git status :当前文件状态
 git log :当前提交信息
 git config --list :列出git的配置信息
 git branch : 列出所有的branch，并用* 表示出当前分支
+
+6.git commit --amend命令：
+ 该命令会撤销上次最后一次提交（commit），并将暂存区的文件重新提交
+
+7.git checkout -- filename ：
+该命令会从暂存区拉取filename 来替换当前工作区修改乱了的filename 如果
+filename已经在暂存区了，则该操作不会起作用
+
+8.git  restore  --staged filename:将暂存区的filename unstage到工作区
+   git reset HEAD filename:将版本库中HEAD指向的filename 拉取到暂存区
+
+9.对某个文件取消跟踪
+git rm --cached readme1.txt    删除readme1.txt的跟踪，并保留在本地。
+git rm --f readme1.txt    删除readme1.txt的跟踪，并且删除本地文件。

@@ -80,6 +80,11 @@ ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authoriz
     例如：cd  /home/taohe/ht_git
               git clone ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git
     执行上述两条命令后会在ht_git目录下生成托管的文件夹git_study（以及相应的文件）
+10) 经过上述步骤后提交时还比较麻烦，因为还必须使用git push ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git master来讲代码提交到远程，为了解决这个问题
+11）git remote add origin ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git 命令类似于给
+      上面的远程仓库取了一个别名叫origin
+12) 使用git --set-upstream origin master 将本地的分支和origin下的master进行绑定，以后再执行git pull 或者gitpush时
+就不用再写那么长的地址和分支名称了，简化使用方式。
 
 18. .gitignore 文件的使用：
      在本地目录下新建一个文件，取名为".gitignore",然后在该文件中将要忽略的文件名称写入该文件中（可以使用通配符）

@@ -58,7 +58,7 @@ git stash drop stash@{0}: 将stash中的{0}删除掉
 2）该命令执行后有可能会出现没有弹出输入用户名和密码的弹框，此时可以按Ctrl+C，退出push状态
 3）然后执行git credential-manager uninstall命令，执行后既可正常弹出用户名和密码窗口
 4）再执行git push https://github.com/hetao-bj/git_study.git master
-5）提示：fatal: unable to access 'https://github.com/hetao-bj/git_study.git/': Failed to connect to github.com port 443: Timed out
+5）提示：fatal: unable to access 'https://github.com/hetao-bj/git_study.git/': Failed to connect to github.com port      443: Timed out
 6）执行git config --global http.sslVerify "false"，解决第五步的问题
 7）再执行git push https://github.com/hetao-bj/git_study.git master，将本地仓库的内容推送到远程仓库的master分支
 

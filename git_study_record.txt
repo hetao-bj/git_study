@@ -66,6 +66,8 @@ git stash drop stash@{0}: 将stash中的{0}删除掉
 ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authorized_keys文件中
 复制后再对服务器的仓库进行push或者pull的操作时不需要再输入密码
 
+17.git学习修改
+
 
 
 

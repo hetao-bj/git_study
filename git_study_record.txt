@@ -66,7 +66,26 @@ git stash drop stash@{0}: 将stash中的{0}删除掉
 ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authorized_keys文件中
 复制后再对服务器的仓库进行push或者pull的操作时不需要再输入密码
 
+17.在自有服务器中创建仓库：
+1）ssh taohe@192.168.50.114
+2)  mkdir ht_git
+3) cd ht_git
+4) mkdir git_study.git
+5) cd git_study.git
+6) git init --bare //在服务器中建立一个裸露的仓库
+7）切回本地仓库中的git bash后，git push  ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git
+8) 输入密码后即可将本地的内容提交到服务器
+9）提交完成后再git_study.git中并看不到提交的文件，想要使用提交的文件，可以再新建一个文件夹
+     然后使用git clone命令从服务器中将文件下载下来
+    例如：cd  /home/taohe/ht_git
+              git clone ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git
+    执行上述两条命令后会在ht_git目录下生成托管的文件夹git_study（以及相应的文件）
 
+18. .gitignore 文件的使用：
+     在本地目录下新建一个文件，取名为".gitignore",然后在该文件中将要忽略的文件名称写入该文件中（可以使用通配符）
+     这样在以后的文件有变动时，.gitignore文件中记录的文件将不会被跟踪
+19. git help command：可以打开该command的帮助网页，里面有更详细的命令介绍
+     例如：git help add  git help help
 
 
 

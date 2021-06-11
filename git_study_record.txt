@@ -112,5 +112,16 @@ ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authoriz
     推送本地仓库和远程仓库所有名字相同的分支。
     这是git当前版本的缺省值。
 
+21. git rebase的使用：
+    假如有两个分支mywork和origin，且当前分支是mywork
+    那么：
+    1）git rebase origin :
+         该命令会把你的"mywork"分支里的每个提交(commit)取消掉，并且把它们临时 保存为补丁(patch)(这些补丁放             到".git/rebase"目录中),然后把"mywork"分支更新 到最新的"origin"分支，最后把保存的这些补丁应用到"mywork"分         支  上
+    2）在rebase的过程中，也许会出现冲突(conflict). 在这种情况，Git会停止rebase并会让你去解决冲突；在解决完冲突后            ，用"git add ."命令去更新这些内容的索引(index), 然后，你无需执行 git-commit,只要执行:
+          git rebase --continue ,     这样git会继续应用(apply)余下的补丁
+    3)   git rebase --abort :在任何时候，你可以用--abort参数来终止rebase的行动，并且"mywork" 分支会回到rebase开          始前的状态
+
+
+
 
 

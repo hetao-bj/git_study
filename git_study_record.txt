@@ -36,6 +36,7 @@ git mv old_filename new_filename :将工作区和暂存区的文件都进行重�
 11. 分支创建
 git branch branch_name 创建一个分支，但是并不切换
 git checkout -b branch_name 创建一个分支并切换过去
+git checkout branch_name 切换到已有分支
 
 12.git diff：比较工作区与暂存区文件的差异
 git diff --staged : 比较暂存区与版本库的文件差异

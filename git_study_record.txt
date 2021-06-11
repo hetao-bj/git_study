@@ -92,7 +92,7 @@ ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authoriz
      这样在以后的文件有变动时，.gitignore文件中记录的文件将不会被跟踪
 19. git help command：可以打开该command的帮助网页，里面有更详细的命令介绍
      例如：git help add  git help help
-20 测试git pull ,git 的2.0版本以后git push.default 设置为simple模式
+20. git 的2.0版本以后git push.default 设置为simple模式
  git config --global push.default simple
  push.default可用的值如下：
     1.nothing

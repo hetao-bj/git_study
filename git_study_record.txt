@@ -92,7 +92,25 @@ ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authoriz
      这样在以后的文件有变动时，.gitignore文件中记录的文件将不会被跟踪
 19. git help command：可以打开该command的帮助网页，里面有更详细的命令介绍
      例如：git help add  git help help
-20 测试git pull 
+20 测试git pull ,git 的2.0版本以后git push.default 设置为simple模式
+ git config --global push.default simple
+ push.default可用的值如下：
+    1.nothing
+    不推送任何东西并有错误提示，除非明确指定分支引用规格。强制使用分支引用规格来避免可能潜在的错
+误。
+    2.current
+    推送当前分支到接收端名字相同的分支。
+    3.upstream
+    推送当前分支到上游@{upstream}。这个模式只适用于推送到与拉取数据相同的仓库，比如中央工作仓库流
+程模式。
+    4.simple
+    在中央仓库工作流程模式下，拒绝推送到上游与本地分支名字不同的分支。也就是只有本地分支名和上游分
+支名字一致才可以推送，
+    就算是推送到不是拉取数据的远程仓库，只要名字相同也是可以的。在GIT 2.0中，simple将会是push.default的默认值。
+    simple只会推送本地当前分支。
+    5.matching
+    推送本地仓库和远程仓库所有名字相同的分支。
+    这是git当前版本的缺省值。
 
 
 

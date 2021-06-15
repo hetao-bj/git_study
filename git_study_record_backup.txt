@@ -1,0 +1,130 @@
+1.让git管理文件：
+在需要git管理的文件夹上右键点击git bash here，打开git命令行后，执行git init命令即可
+
+2.将未跟踪的文件添加到暂存区，需要使用：
+git add filename 或者 git commit -am "message"
+
+3.git 用户的注册：
+ git config --global user.name hetao 
+ git config --global user.email 289022725@qq.com
+
+4.只有注册后才可以进行git commit 操作，否则git不知道是哪位用户在进行提交
+
+5.查看git状态：
+git status :当前文件状态
+git log :当前提交信息
+git config --list :列出git的配置信息
+git branch : 列出所有的branch，并用* 表示出当前分支
+
+6.git commit --amend命令：
+ 该命令会撤销上次最后一次提交（commit），并将暂存区的文件重新提交
+
+7.git checkout -- filename ：
+该命令会从暂存区拉取filename 来替换当前工作区修改乱了的filename 如果
+filename已经在暂存区了，则该操作不会起作用
+
+8.git  restore  --staged filename:将暂存区的filename unstage到工作区
+   git reset HEAD filename:将版本库中HEAD指向的filename 拉取到暂存区
+
+9.对某个文件取消跟踪
+git rm --cached readme1.txt    删除readme1.txt的跟踪，并保留在本地。
+git rm --f readme1.txt    删除readme1.txt的跟踪，并且删除本地文件和暂存区文件。
+
+10.git中文件的重命名
+git mv old_filename new_filename :将工作区和暂存区的文件都进行重命名
+
+11. 分支创建
+git branch branch_name 创建一个分支，但是并不切换
+git checkout -b branch_name 创建一个分支并切换过去
+git checkout branch_name 切换到已有分支
+
+12.git diff：比较工作区与暂存区文件的差异
+git diff --staged : 比较暂存区与版本库的文件差异
+git diff 版本号 版本号 ：比较当前分支内的两个版本之间文件的差异
+git diff 分支 分支：比较两个分支的最新提交版本之间的差异
+
+13.git merge branch_name :
+合并两个分支，合并之前需要切换到master分支，然后进行快速合并或者冲突合并
+
+14.git stash:将工作区的改动保存到stash中
+git stash list:查看stash中保存有哪些内容
+git stash apply stash@{0}：将stash中的{0}所包含的文件应用到当前工作区中
+git stash pop stash@{0}:将stash中的{0}所包含的文件应用到当前工作区中，并删除stash中的{0}
+git stash drop stash@{0}: 将stash中的{0}删除掉
+
+15.在github上创建远程仓库方式见图片教程，此处说明一下，
+对已经创建好的远程仓库，在第一次将本地仓库推送到远程仓库时
+使用命令：
+1）git push https://github.com/hetao-bj/git_study.git master
+2）该命令执行后有可能会出现没有弹出输入用户名和密码的弹框，此时可以按Ctrl+C，退出push状态
+3）然后执行git credential-manager uninstall命令，执行后既可正常弹出用户名和密码窗口
+4）再执行git push https://github.com/hetao-bj/git_study.git master
+5）提示：fatal: unable to access 'https://github.com/hetao-bj/git_study.git/': Failed to connect to github.com port      443: Timed out
+6）执行git config --global http.sslVerify "false"，解决第五步的问题
+7）再执行git push https://github.com/hetao-bj/git_study.git master，将本地仓库的内容推送到远程仓库的master分支
+
+16.ssh-keygen：生成本地的公钥和私钥
+ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authorized_keys文件中
+复制后再对服务器的仓库进行push或者pull的操作时不需要再输入密码
+
+17.在自有服务器中创建仓库：
+1）ssh taohe@192.168.50.114
+2)  mkdir ht_git
+3) cd ht_git
+4) mkdir git_study.git
+5) cd git_study.git
+6) git init --bare //在服务器中建立一个裸露的仓库
+7）切回本地仓库中的git bash后，git push  ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git
+8) 输入密码后即可将本地的内容提交到服务器
+9）提交完成后再git_study.git中并看不到提交的文件，想要使用提交的文件，可以再新建一个文件夹
+     然后使用git clone命令从服务器中将文件下载下来
+    例如：cd  /home/taohe/ht_git
+              git clone ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git
+    执行上述两条命令后会在ht_git目录下生成托管的文件夹git_study（以及相应的文件）
+10) 经过上述步骤后提交时还比较麻烦，因为还必须使用git push ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git master来讲代码提交到远程，为了解决这个问题
+11）git remote add origin ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git 命令类似于给
+      上面的远程仓库取了一个别名叫origin
+12) 使用git --set-upstream origin master 将本地的分支和origin下的master进行绑定，以后再执行git pull 或者gitpush时
+就不用再写那么长的地址和分支名称了，简化使用方式。
+
+18. .gitignore 文件的使用：
+     在本地目录下新建一个文件，取名为".gitignore",然后在该文件中将要忽略的文件名称写入该文件中（可以使用通配符）
+     这样在以后的文件有变动时，.gitignore文件中记录的文件将不会被跟踪
+19. git help command：可以打开该command的帮助网页，里面有更详细的命令介绍
+     例如：git help add  git help help
+20. git 的2.0版本以后git push.default 设置为simple模式
+ git config --global push.default simple
+ push.default可用的值如下：
+    1.nothing
+    不推送任何东西并有错误提示，除非明确指定分支引用规格。强制使用分支引用规格来避免可能潜在的错
+误。
+    2.current
+    推送当前分支到接收端名字相同的分支。
+    3.upstream
+    推送当前分支到上游@{upstream}。这个模式只适用于推送到与拉取数据相同的仓库，比如中央工作仓库流
+程模式。
+    4.simple
+    在中央仓库工作流程模式下，拒绝推送到上游与本地分支名字不同的分支。也就是只有本地分支名和上游分
+支名字一致才可以推送，
+    就算是推送到不是拉取数据的远程仓库，只要名字相同也是可以的。在GIT 2.0中，simple将会是push.default的默认值。
+    simple只会推送本地当前分支。
+    5.matching
+    推送本地仓库和远程仓库所有名字相同的分支。
+    这是git当前版本的缺省值。
+
+21. git rebase的使用：
+    假如有两个分支mywork和origin，且当前分支是mywork
+    那么：
+    1）git rebase origin :
+         该命令会把你的"mywork"分支里的每个提交(commit)取消掉，并且把它们临时保存为补丁(patch)(这些补丁放到".git/rebase"目录中),
+         然后把"mywork"分支更新 到最新的"origin"分支，最后把保存的这些补丁应用到"mywork"分支上
+    2）在rebase的过程中，也许会出现冲突(conflict). 在这种情况，Git会停止rebase并会让你去解决冲突；在解决完冲突后，
+         用"git add ."命令去更新这些内容的索引(index), 然后，你无需执行 git-commit,只要执行:
+         git rebase --continue ,这样git会继续应用(apply)余下的补丁
+    3)   git rebase --abort :在任何时候，你可以用--abort参数来终止rebase的行动，并且"mywork" 分支会回到rebase开始前的状态
+    4）git pull --rebase 可以以rebase的模式合并分支（默认是merge的方式）
+
+
+
+
+

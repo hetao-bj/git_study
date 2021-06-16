@@ -1,0 +1,20 @@
+{
+    "python.pythonPath": "/home/VASTAI/taohe/anaconda3/bin/python",
+    "files.associations": {
+        "complex": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "utility": "cpp",
+        "typeindex": "cpp",
+        "typeinfo": "cpp",
+        "tensor": "cpp",
+        "atomic": "cpp",
+        "chrono": "cpp",
+        "cstdint": "cpp",
+        "*.def": "cpp",
+        "*.inc": "cpp",
+        "*.tcc": "cpp"
+    }
+}

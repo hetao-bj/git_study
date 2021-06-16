@@ -1,0 +1,55 @@
+{
+    // 使用 IntelliSense 了解相关属性。
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    //"version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Test",
+            "type": "python",
+            "request": "launch",
+            // "program": "test_vacc_dynamic_shape_op.py",
+            // "cwd": "/home/VASTAI/taohe/tvm/tests/python/relay/",
+            "cwd":"/home/VASTAI/taohe/tvm/tests/python/contrib/vacc/",
+            "program":"test_layer_norm.py",
+            "console": "integratedTerminal",
+            "preLaunchTask": "tvmbuild"
+        },
+        {
+            "name": "(gdb) 启动",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/VASTAI/taohe/anaconda3/bin/python",
+            "args": [
+                // "tutorials/relay_quick_start.py"
+                // "tutorials/Conv1d_opencl.py"
+                // "tutorials/Conv1d_opencl_ic_oc.py"
+                // "tutorials/tensor_expr_get_started.py"
+                // "tutorials/relay_quick_start.py",
+                // "tests/python/relay/test_vacc_align_op.py"
+                "tests/python/contrib/vacc/test_layer_norm.py"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "tvmbuild"
+        },
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+    ]
+}

@@ -1,0 +1,152 @@
+commit 64e6605a5f9620c172834ae3a69d740f261460de
+Author: hetao <289022725@qq.com>
+Date:   Fri Jun 11 15:22:55 2021 +0800
+
+    add some info of git pull --rebase
+
+commit 7a15b32ce3f455737b08c26764228546ec8db41b
+Author: hetao-bj <70883608+hetao-bj@users.noreply.github.com>
+Date:   Fri Jun 11 15:18:21 2021 +0800
+
+    Update git_study_record.txt
+
+commit 6470ae1f0aa9617ed39033bf28d650015fabc0cb
+Author: hetao <289022725@qq.com>
+Date:   Fri Jun 11 15:12:32 2021 +0800
+
+    Format adjustment
+
+commit d418381fbe80b103f231369223fec5532bcf4465
+Author: hetao-bj <70883608+hetao-bj@users.noreply.github.com>
+Date:   Fri Jun 11 15:09:22 2021 +0800
+
+    Update git_study_record.txt
+
+commit 3d7e6e628a33bffb98ccfa9bbe8ccddbbdf6af5c
+Author: hetao <289022725@qq.com>
+Date:   Fri Jun 11 15:05:06 2021 +0800
+
+    Introduction to git rebase
+
+commit 2e944f2178699169457b054dbf11a6882ac8bb67
+Author: hetao <289022725@qq.com>
+Date:   Fri Jun 11 12:54:56 2021 +0800
+
+    add the spec of git
+
+commit aeb32c57c61b9b8b73376f0a4318733d8e1d2874
+Author: hetao <289022725@qq.com>
+Date:   Fri Jun 11 12:08:31 2021 +0800
+
+    add setting git push.default method
+
+commit b037960ac63377d8a53e431bb0a60af0a33eb68b
+Author: hetao <289022725@qq.com>
+Date:   Fri Jun 11 10:45:35 2021 +0800
+
+    test git pull to default
+
+commit cda46eb02bf6eb8deef2dd905743d716a1689b42
+Author: hetao <289022725@qq.com>
+Date:   Fri Jun 11 10:34:37 2021 +0800
+
+    add content
+
+commit db8989910f1148d56b545361c5b90f869140528b
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 19:10:11 2021 +0800
+
+    add git remote usage
+
+commit f8267a35d15b43d476fdcab3765e726bd872c5fb
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 19:03:03 2021 +0800
+
+    last commit
+
+commit a5183155dfcc0f7b294217d0ef2990d0cbd60bee
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 18:11:05 2021 +0800
+
+    undo 17
+
+commit a69c8475abd75a59f82d2a43ddac2622377ebf93
+Merge: 739f23e 325e2d8
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 18:08:43 2021 +0800
+
+    Merge branch 'master' of github.com:hetao-bj/git_study
+
+commit 739f23ec6b4fa3b2705a5c74675393d841a75cf6
+Merge: 51a3752 bd5fb9f
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 18:02:43 2021 +0800
+
+    solve conflict
+
+commit 325e2d80c92de7a09beb3eac133a63ce6c651463
+Merge: 51a3752 bd5fb9f
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 18:02:43 2021 +0800
+
+    solve conflict
+
+commit 51a3752c241025ea24da2bbc72f322965e7b17f2
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 17:57:13 2021 +0800
+
+    test test_conflict
+
+commit bd5fb9fb60e599367fbaf65030feb384b6232229
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 17:56:24 2021 +0800
+
+    study  test_conflict
+
+commit cbdcc58886f1a796b8dbb461af3a3ba93409fd29
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 17:53:11 2021 +0800
+
+    modify format
+
+commit 35d81171ea8bec0ae0d7a4be25a43e55d95b8a03
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 17:00:12 2021 +0800
+
+    add jpg and modify txt
+
+commit dca9fb41d2e8cc1ddf5001b5aecb18f765999c71
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 15:26:52 2021 +0800
+
+    add file of jpg
+
+commit 37a61786e23bb69403a2e687885eb294c1e9c6d4
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 15:02:14 2021 +0800
+
+    save this record
+
+commit 4e0de91ef93416fe4bba73c00eff664412ff2bbc
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 11:10:57 2021 +0800
+
+    ht_test commit
+
+commit f00ec1653f8a6680e4e07689f0fe27548ed15646
+Author: hetao <289022725@qq.com>
+Date:   Thu Jun 10 11:05:53 2021 +0800
+
+    modify the illustrate of git reset HEAD
+
+commit fffbde23c90f9122c5db4df607bd5b03b5072d84
+Author: hetao <289022725@qq.com>
+Date:   Wed Jun 9 17:33:07 2021 +0800
+
+    modified git_study_record.txt use git commit --amend
+
+commit c2399dc1eeb7c9277964fd01edca0e53354c74a2
+Author: hetao <289022725@qq.com>
+Date:   Wed Jun 9 17:30:48 2021 +0800
+
+    First commit git_study_record.txt

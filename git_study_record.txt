@@ -15,6 +15,10 @@ git status :当前文件状态
 git log :当前提交信息
 git config --list :列出git的配置信息
 git branch : 列出所有的branch，并用* 表示出当前分支
+git branch --set-upstream-to=origin/master 将当前分支和远程的master分支进行关联，后续git pull 和push的操作都是从origin/master 来进行
+git branch --unset-upsterem 取消当前分支和远程分支的关联
+git push --set-upstream origin branch_name 在远程创建一个branch_name，并将当前分支推送到branch_name，以后的git push 和gitpull都会从branch_name来进行
+git remote show origin 将显示当前用户下的所有分支和远程分支的关联关系
 
 6.git commit --amend命令：
  该命令会撤销上次最后一次提交（commit），并将暂存区的文件重新提交

@@ -26,9 +26,11 @@ git remote show origin 将显示当前用户下的所有分支和远程分支的
 7.git checkout -- filename ：
 该命令会从暂存区拉取filename 来替换当前工作区修改乱了的filename 如果
 filename已经在暂存区了，则该操作不会起作用
+git checkout head ,会拉取版本库中的文件替换工作区和暂存区的文件
 
 8.git  restore  --staged filename:将暂存区的filename unstage到工作区
-   git reset HEAD filename:将版本库中HEAD指向的filename 拉取到暂存区
+  作用好像与git checkout -- filename相同
+   git reset HEAD filename:将版本库中HEAD指向的filename 拉取到暂存区，并替换暂存区的文件
 
 9.对某个文件取消跟踪
 git rm --cached readme1.txt    删除readme1.txt的跟踪，并保留在本地。

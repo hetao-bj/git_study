@@ -130,7 +130,7 @@ ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authoriz
     3)   git rebase --abort :在任何时候，你可以用--abort参数来终止rebase的行动，并且"mywork" 分支会回到rebase开始前的状态
     4）git pull --rebase 可以以rebase的模式合并分支（默认是merge的方式）
 
-默认gitpush
+
 
 
 

@@ -89,8 +89,8 @@ ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authoriz
     执行上述两条命令后会在ht_git目录下生成托管的文件夹git_study（以及相应的文件）
 10) 经过上述步骤后提交时还比较麻烦，因为还必须使用git push ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git master来讲代码提交到远程，为了解决这个问题
 11）git remote add origin ssh://taohe@192.168.50.114/home/taohe/ht_git/git_study.git 命令类似于给
-      上面的远程仓库取了一个别名叫origin
-12) 使用git --set-upstream origin master 将本地的分支和origin下的master进行绑定，以后再执行git pull 或者gitpush时
+      上面的远程仓库取了一个别名叫origin，git remote remove(或者rm) 远程仓库名，就可以删除远程仓库
+12) 使用git push --set-upstream origin master 将本地的分支和origin下的master进行绑定，以后再执行git pull 或者git push时
 就不用再写那么长的地址和分支名称了，简化使用方式。
 
 18. .gitignore 文件的使用：
@@ -129,6 +129,8 @@ ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authoriz
          git rebase --continue ,这样git会继续应用(apply)余下的补丁
     3)   git rebase --abort :在任何时候，你可以用--abort参数来终止rebase的行动，并且"mywork" 分支会回到rebase开始前的状态
     4）git pull --rebase 可以以rebase的模式合并分支（默认是merge的方式）
+
+默认gitpush
 
 
 

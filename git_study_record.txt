@@ -131,7 +131,6 @@ ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authoriz
     4）git pull --rebase 可以以rebase的模式合并分支（默认是merge的方式）
 
 默认gitpush
-再推
 
 
 

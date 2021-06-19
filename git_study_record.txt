@@ -128,9 +128,9 @@ ssh-copy-id hetao@192.168.50.114:将本地的公钥复制到服务器的authoriz
          用"git add ."命令去更新这些内容的索引(index), 然后，你无需执行 git-commit,只要执行:
          git rebase --continue ,这样git会继续应用(apply)余下的补丁
     3)   git rebase --abort :在任何时候，你可以用--abort参数来终止rebase的行动，并且"mywork" 分支会回到rebase开始前的状态
-    4）git pull --rebase 可以以rebase的模式合并分支（默认是merge的方式）
+    4）git pull --rebase 可以以rebase的模式合并分支（默认是merge的方式  ）
 
-
+====================END====================
 
 
 
